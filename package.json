@@ -1,0 +1,14 @@
+{
+    "name"          : "parray",
+    "description"   : "An utility to handle array elements in parallel",
+    "homepage"      : "https://github.com/nakamura-to/parray",
+    "keywords"      : ["control-flow", "async", "wait", "await", "forEach", "parallel", "array"],
+    "author"        : "Toshihiro Nakamura <toshihiro.nakamura@gmail.com>",
+    "contributors"  : [],
+    "repository"    : {"type": "git", "url": "git@github.com:nakamura-to/parray.git"},
+    "main"          : "./lib/parray.js",
+    "devDependencies": { 
+      "mocha":      "~0.11.0"
+    },
+    "version"       : "0.0.0"
+}
