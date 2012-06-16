@@ -1,7 +1,6 @@
 {
     "name"          : "parray",
-    "description"   : "An utility to handle array elements in parallel",
-    "homepage"      : "https://github.com/nakamura-to/parray",
+    "description"   : "An utility to handle large array elements in parallel in Node environment",
     "keywords"      : ["control-flow", "async", "wait", "await", "forEach", "parallel", "array"],
     "author"        : "Toshihiro Nakamura <toshihiro.nakamura@gmail.com>",
     "contributors"  : [],
@@ -10,5 +9,5 @@
     "devDependencies": { 
       "mocha":      "~0.11.0"
     },
-    "version"       : "0.0.0"
+    "version"       : "0.1.0"
 }

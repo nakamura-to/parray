@@ -1,7 +1,7 @@
-Parray — An utility to handle array elements in parallel
-========================================================
+Parray — An utility to handle large array elements in parallel
+==============================================================
 
-Parray is an utility to handle array elements in parallel in Node environment.
+Parray is an utility to handle large array elements in parallel in Node environment.
 
 ## Installing
 
@@ -74,11 +74,11 @@ var parray = require('parray');
 var fs = require('fs');
 
 var files = ['file1', 'file2'];
-var latch = gate.latch();
+var g = gate.create();
 parray.forEach(files, function (file) {
-  fs.readFile(file, 'utf8', latch({name: file, data: 1}));
+  fs.readFile(file, 'utf8', g.latch({name: file, data: 1}));
 }, function () {
-  latch.await(function (err, results) {
+  g.await(function (err, results) {
     if (err) throw err;
     console.log(results[0]); // { name: 'file1', data: 'FILE1' }
     console.log(results[1]); // { name: 'file2', data: 'FILE2' }
